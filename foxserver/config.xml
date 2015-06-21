@@ -1,0 +1,104 @@
+<serverConfiguration>
+	<serverName>home.xxsyzx.com</serverName>
+	<serverIP description="If this item is empty, the server will use any available address."></serverIP>
+	<serverPort>80</serverPort>
+	<maxThread description="Max concurrent threads, you can set it to 500. However it needs more resources.">50</maxThread>
+	<maxClient>300</maxClient>
+	<maxConnectionPerClient>30</maxConnectionPerClient>
+	<defaultPages>index.htm|index.html|default.htm|index.php</defaultPages>
+	<pluginExtensions description="Put the extension here if it's a cgi scripts.">do php xiaoxia</pluginExtensions>
+	<root description="Default root directory for system files such as icons.">web</root>
+	<maxRequestsPerConnection>100</maxRequestsPerConnection>
+	<terminalLog description="1 means true">1</terminalLog>
+	<fileLog directory="log">1</fileLog>
+	<connectionTimeout>60</connectionTimeout>
+	<serverBusyThreads>2</serverBusyThreads>
+	<sessionTimeout>600</sessionTimeout>
+	<errorPages>
+		<page code="404">web/error/404.html</page>
+		<page code="403">web/error/403.html</page>
+	</errorPages>
+	<documentTypes note="No case sensitiveness">
+		<type extension="html"	value="text/html" />
+		<type extension="htm"	value="text/html" />
+		<type extension="" 	value="text/html" description="No extension file"/>
+		<type extension="exe" 	value="application/octet-stream" />
+		<type extension="Xiaoxia"	value="text/html" />
+		<type extension="js" 	value="text/html" />
+		<type extension="gif" 	value="image/gif" />
+		<type extension="bmp" 	value="image/x-xbitmap" />
+		<type extension="jpg" 	value="image/jpeg" />
+		<type extension="png"	value="image/png" />
+		<type extension="ico"	value="image/x-icon" />
+		<type extension="asp"	value="text/html" />
+		<type extension="php"	value="text/html" />
+		<type extension="mht"	value="text/html" />
+		<type extension="xml"	value="text/xml" />
+		<type extension="txt" 	value="text/plain" />
+		<type extension="c" 	value="text/plain" />
+		<type extension="cpp" 	value="text/plain" />
+		<type extension="hpp" 	value="text/plain" />
+		<type extension="h" 	value="text/plain" />
+		<type extension="lrc" 	value="text/plain" />
+		<type extension="pdf" 	value="application/pdf" />
+		<type extension="avi" 	value="video/avi" />
+		<type extension="css" 	value="text/css" />
+		<type extension="swf" 	value="application/x-shockwave-flash" />
+		<type extension="flv" 	value="application/x-shockwave-flash" />
+		<type extension="xls" 	value="application/vnd.ms-excel" />
+		<type extension="doc" 	value="application/vnd.ms-word" />
+		<type extension="mid" 	value="audio/midi" />
+		<type extension="mp3" 	value="audio/mpeg" />
+		<type extension="ogg" 	value="audio/ogg" />
+		<type extension="rm" 	value="application/vnd.rn-realmedia" />
+		<type extension="rmvb" value="application/vnd.rn-realmedia" />
+		<type extension="wav" 	value="audio/wav" />
+		<type extension="wmv" 	value="video/x-ms-wmv" />
+		<type extension="zip" 	value="application/x-tar" />
+		<type extension="rar" 	value="application/x-tar" />
+		<type extension="7z" 	value="application/x-tar" />
+		<type extension="tar" 	value="application/x-tar" />
+		<type extension="gz" 	value="application/x-tar" />
+	</documentTypes>
+	<fastCGI>
+		<program extension="php">
+			<serverAddress>127.0.0.1</serverAddress>
+			<serverPort>8080</serverPort>
+		</program>
+		<program extension="xiaoxia">
+			<serverAddress>127.0.0.1</serverAddress>
+			<serverPort>8080</serverPort>
+		</program>
+	</fastCGI>
+	<foxProject>
+		<serverList>127.0.0.1:8888</serverList>
+		<entry>/fox2</entry>
+		<password>password</password>
+		<loginURL>http://login.aquickbrownfoxjumpsoverthelazydog.tk/</loginURL>
+		<sessionTimeout>1200</sessionTimeout>
+		<proxyHost>aquickbrownfoxjumpsoverthelazydog.tk</proxyHost>
+		<sendMode>decode</sendMode>
+		<receiveMode>encode</receiveMode>
+	</foxProject>
+	
+	<note>All virtual host items should be put together.</note>
+	
+	
+	<virtualHost name="localhost">
+		<alias>127.0.0.1</alias>
+		<root>web</root>
+	</virtualHost>
+	<virtualHost name="proxy.test">
+		<root>e:/users/test</root>
+		<proxy>
+			<extensions description="If this item is empty, it redirects all requests.">asp</extensions>
+			<serverAddress>127.0.0.1</serverAddress>
+			<serverPort>81</serverPort>
+		</proxy>
+	</virtualHost>
+	<virtualHost name="*" description="This matches all host names">
+		<root description="The root direcotry for this host">web</root>
+		<list descripton="List the directory">1</list>
+	</virtualHost>
+	
+</serverConfiguration>

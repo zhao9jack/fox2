@@ -1,0 +1,27 @@
+<serverConfiguration>
+	<serverName>Fox2 Client</serverName>
+	<serverIP>127.0.0.1</serverIP>
+	<serverPort>1998</serverPort>
+	<maxThread>50</maxThread>
+	<maxClient>50</maxClient>
+	<maxConnectionPerClient>50</maxConnectionPerClient>
+	<defaultPages></defaultPages>
+	<pluginExtensions description="Put the extension here if it's a cgi scripts.">*</pluginExtensions>
+	<root description="Default root directory for system files such as icons.">web</root>
+	<terminalLog description="1 means true">0</terminalLog>
+	<fileLog directory="log">0</fileLog>
+	<connectionTimeout>10</connectionTimeout>
+	<sessionTimeout>120</sessionTimeout>
+	<maxRequestsPerConnection>100</maxRequestsPerConnection>
+	<foxProject>
+		<serverList desc="CMCC Proxy">211.138.124.210:80|221.130.162.247:80|221.130.162.245:80</serverList>
+		<entry>/</entry>
+		<proxyHost>thequickbrownfoxjumpsoverthelazydog.tk</proxyHost>
+		<sendMode>encode</sendMode>
+		<receiveMode>decode</receiveMode>
+	</foxProject>
+	
+	<virtualHost name="*" >
+		<root description="The root direcotry for this host">web</root>
+	</virtualHost>
+</serverConfiguration>

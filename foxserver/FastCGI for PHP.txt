@@ -1,0 +1,13 @@
+PHP与HomeServer的配置。
+
+1. 在www.php.net下载最新版php
+例如php5.3
+Windows Binary： http://windows.php.net/downloads/releases/php-5.3.0-Win32-VC6-x86.zip
+
+2. 配置好php.ini后，在命令行下在php目录执行php-cgi  -b  127.0.0.1:8080，这个地址可以在config.xml里更改。
+因为目前没有给cgi写进程管理模块，所以只能由使用者来管理。例如写一个脚本文件，当php-cgi异常退出时，重新启动之。
+
+3. 查看config.xml里的配置是否恰当。
+
+4. 运行cwebserver.exe即可。
+

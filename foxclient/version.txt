@@ -1,0 +1,13 @@
+Version changes:
+
+1.0.3b
+Persistent connection doesn't work very well!
+
+1.0.3
+Basic SSL supported. Unfortunately, persistent connection doesn't work!
+
+1.0.2
+Persistent connection supported.
+
+1.0.1
+Basic version.
